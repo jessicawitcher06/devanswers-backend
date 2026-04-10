@@ -50,3 +50,42 @@ devanswers-backend/
 ## Notes
 - Do not commit your `.env` file.
 - All dependencies are listed in `package.json`.
+
+## Verification
+
+All 20 queries in `queries.js` were tested using `npm run queries` and executed successfully against the seeded database.
+
+### Sample Output
+```
+User created: {
+  _id: ObjectId("..."),
+  name: 'Robin',
+  email: 'robin@example.com',
+  password: 'hashed_password_7',
+  createdAt: 2025-06-25T10:15:00.000Z,
+  __v: 0
+}
+Questions tagged with 'javascript': [
+  {
+    _id: ObjectId("..."),
+    title: 'How can I improve the performance of a react app?',
+    tags: ['javascript', 'performance'],
+    ...
+  },
+  ...
+]
+Answers with voteCount 0: [
+  {
+    _id: ObjectId("..."),
+    answerText: '...',
+    voteCount: 0,
+    ...
+  },
+  ...
+]
+Top two users by answers posted: [
+  { _id: ObjectId("..."), answerCount: 3 },
+  { _id: ObjectId("..."), answerCount: 2 }
+]
+...etc.
+```
